@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página Web Biografia</title>
+    <style>
+ 
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            background-color: #333;
+            overflow: hidden;
+        }
+
+        li {
+            float: left;
+            font-size: 20px;   
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 20px 27px;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            background-color: #33FFB8;
+        }
+
+  
+        button {
+            background-color: #B777FF;
+            border: none;
+            color: white;
+            padding: 20px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: block;
+            font-size: 20px;
+            margin: auto;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #8DF8FD; 
+            color: black;
+        }
+
+
+        h1 {
+            text-align: center;
+            font-size: 50px;
+        }
+
+        p {
+            font-size: 20px;
+        }
+
+        #inicioContenido img, #biografiaContenido img {
+            margin: auto;
+            display: block;
+        }
+
+        #contactoContenido img{
+            float: right;
+            margin-left: 20px;
+        }
+
+    </style>
+</head>
+<body>
+  
+    <ul>
+        <li><a href="#inicio" onclick="mostrarInicio()">INICIO</a></li>
+        <li><a href="#biografia" onclick="mostrarBiografia()">BIOGRAFIA</a></li>
+        <li><a href="#contacto" onclick="mostrarContacto()">CONTACTO</a></li>
+    </ul>
+
+    <div id="inicioContenido">
+        <h1 id="inicio">BIENVENIDO A MI PAGINA WEB</h1>
+        <p>Esta es una página web de Jamilee Jaramillo Villamar.</p>
+        <button onclick="mostrarBiografia()">  BIOGRAFIA  </button>
+        <p></p>
+        <img src="https://brainfoodmkt.com/wp-content/uploads/2021/07/tipos-de-paginas-web.png" alt="Imagen de Portada" width="1000">
+    </div>
+
+    <div id="biografiaContenido" style="display:none;">
+        <h1 id="biografia">BIOGRAFIA DE</h1>
+        <h1>JAMILEE JARAMILLO</h1>
+        <img src="https://raw.githubusercontent.com/JAMILEEJARAMILLO/IMG/275a5ddac647ae712d0e55537511b003c4af6205/FOTO%20TAMA%C3%91O%20CARNET.jpg" alt="Imagen de Biografia" width="300">
+        <p>Una desarrolladora web apasionada por la tecnología.</p>
+        <p>Jeannella Jamilee Jaramillo Villamar, nacida el 7 de diciembre de 2002, es una joven estudiante universitaria con una pasión innata por la tecnología. Desde sus primeros días en la Escuela Oscar Efrén Reyes y luego en el Colegio José Miguel García Moreno, Jeannella mostró un gran interés por el mundo digital y la informática.</p>
+        <p>Actualmente, a sus 21 años de edad, Jeannella está cursando sus estudios universitarios en la Universidad Técnica de Machala, donde se ha embarcado en la carrera de Tecnologías de la Información, dentro de la Facultad de Ingeniería Civil. Con una mente curiosa y una dedicación incansable, Jeannella está constantemente explorando nuevas tecnologías y expandiendo sus conocimientos en el campo de la informática.</p>
+        <p>Su determinación y su amor por la tecnología la han llevado a participar en numerosos proyectos y actividades relacionadas con la programación, el diseño web y el desarrollo de software. Jeannella se destaca por su habilidad para resolver problemas de manera creativa y por su compromiso con el aprendizaje continuo.</p>
+        <p>Fuera del ámbito académico, Jeannella disfruta de pasar tiempo con su familia y amigos, así como de explorar nuevas oportunidades para crecer personal y profesionalmente. Con su energía contagiosa y su enfoque decidido, Jeannella está lista para enfrentar cualquier desafío que se le presente en su emocionante viaje hacia el éxito en el mundo de la tecnología.</p>
+    </div>
+  
+    <div id="contactoContenido" style="display:none;">
+        <h1 id="contacto">INFORMACIO DE CONTACTO</h1>
+        <img src="https://cdn-icons-png.flaticon.com/512/1877/1877547.png" alt="Imagen de Contacto" width="500">
+        <p>CONTACTO PERSONAL</p>
+        <p>NOMBRE: Jeannella Jamilee Jaramillo Villamar</p>
+        <p>GMAIL ESTUDIANTIL: jjaramill28@utmachala.edu.ec</p>
+        <p>GMAIL PERSONAL: jamilethjaramillo7@gmail.com</p>
+        <p>TELEFONO: 098 695 7577</p>
+        <p> .</p>
+        <p>REDES SOCIALES</p>
+        <p>FACEBOOK: Jamilee Jaramillo</p>
+        <p>INSTAGRAM: Jamilee Jaramillo</p>
+        <p>WHATSAPP: Milee Jaramillo</p>
+        <p>TIKTOK: @jamileejaramillo</p>
+        <p>DISCORD: @Jjjv</p>
+        <p>GITHUB: JamileeJaramillo</p>
+    </div>
+
+    <script>
+        function mostrarContacto() {
+            document.getElementById("contactoContenido").style.display = "block";
+            document.getElementById("inicioContenido").style.display = "none";
+            document.getElementById("biografiaContenido").style.display = "none";
+        }
+  
+        function mostrarBiografia() {
+            document.getElementById("inicioContenido").style.display = "none";
+            document.getElementById("biografiaContenido").style.display = "block";
+            document.getElementById("contactoContenido").style.display = "none";
+        }
+
+        function mostrarInicio() {
+            document.getElementById("biografiaContenido").style.display = "none";
+            document.getElementById("inicioContenido").style.display = "block";
+            document.getElementById("contactoContenido").style.display = "none";
+        }
+    </script>
+
+</body>
+</html>
