@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página Web</title>
+    <style>
+ 
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            background-color: #333;
+            overflow: hidden;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            background-color: #111;
+        }
+
+  
+        button {
+            background-color: #b19cd9;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049; 
+        }
+    </style>
+</head>
+<body>
+  
+    <ul>
+        <li><a href="#inicio" onclick="mostrarInicio()">INICIO</a></li>
+        <li><a href="#informacion" onclick="mostrarInformacion()">INFORMACIÓN</a></li>
+        <li><a href="#contacto" onclick="mostrarContacto()">CONTACTO</a></li>
+    </ul>
+
+    <div id="inicioContenido">
+        <h1 id="inicio">Bienvenido a mi página web</h1>
+        <p>Esta es una página web de Jamilee Jaramillo Villamar.</p>
+        <img src="https://kinsta.com/es/wp-content/uploads/sites/8/2020/11/fuentes-cursiva.jpg" alt="Imagen de fondo" width="650">
+        <button onclick="alert('¡Hola!\nSOY JEANNELLA JAMILEE JARAMILLO VILLAMAR')">Haz clic aquí</button>
+    </div>
+
+    <div id="informacionContenido" style="display:none;">
+        <h1 id="informacion">Mi nombre es Jeanella Jamilee Jaramillo Villamar. </h1>
+        <p>Soy una desarrolladora web apasionada por la tecnología.</p>
+    </div>
+  
+    <div id="contactoContenido" style="display:none;">
+        <h1 id="contacto">INFORMACIO DE CONTACTO</h1>
+        <p>NOMBRE: Jeannella Jamilee Jaramillo Villamar</p>
+    </div>
+
+    <script>
+        function mostrarContacto() {
+            document.getElementById("contactoContenido").style.display = "block";
+            document.getElementById("inicioContenido").style.display = "none";
+            document.getElementById("informacionContenido").style.display = "none";
+        }
+  
+        function mostrarInformacion() {
+            document.getElementById("inicioContenido").style.display = "none";
+            document.getElementById("informacionContenido").style.display = "block";
+            document.getElementById("contactoContenido").style.display = "none";
+        }
+
+        function mostrarInicio() {
+            document.getElementById("informacionContenido").style.display = "none";
+            document.getElementById("inicioContenido").style.display = "block";
+            document.getElementById("contactoContenido").style.display = "none";
+        }
+    </script>
+
+</body>
+</html>
