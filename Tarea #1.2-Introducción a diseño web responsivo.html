@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página Web Responsiva</title>
+    <style>
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            background-color: #333;
+            overflow: hidden;
+        }
+
+        li {
+            float: left;
+            font-size: 20px;   
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 20px 27px;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            background-color: #33FFB8;
+        }
+        
+
+        .contenido {
+            max-width: auto;
+            margin: auto;
+            padding: 30px;
+        }
+
+        img {
+            max-width: 80%;
+            height: auto;
+            display: block;
+            margin: auto;
+        }
+
+        h1{
+            text-align: center;
+            font-size: 50px;
+        }
+
+        p{
+            text-align: left;
+            font-size: 25px;
+        }
+
+
+        button {
+            background-color: #B777FF;
+            border: none;
+            color: white;
+            padding: 20px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: block;
+            font-size: 20px;
+            margin: auto;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #8DF8FD; 
+            color: black;
+        }
+    </style>
+</head>
+<body>
+
+    <ul>
+        <li><a href="#inicio" onclick="mostrarInicio()">INICIO</a></li>
+        <li><a href="#responsivo" onclick="mostrarResponsivo()">RESPONSIVO</a></li>
+        <li><a href="#contacto" onclick="mostrarContacto()">CONTACTO</a></li>
+    </ul>
+
+
+    <div id="inicioContenido" class="contenido">
+        <h1 id="inicio">PAGINA WEB RESPONSIVO</h1>
+        <p>Esta es una página web de Jamilee Jaramillo Villamar.</p>
+        <button onclick="mostrarResponsivo()">  DATOS DE WEB RESPONSIVO  </button>
+        <p></p>
+        <img src="https://www.d4dcomunicacion.com/wp-content/uploads/Dise%C3%B1o-web-responsive.jpg" alt="Imagen de Portada">
+    </div>
+
+    <div id="responsivoContenido" class="contenido" style="display:none;">
+        <h1 id="responsivo">CONTROLES Y COMPONENTES RESPONSIVOS</h1>
+        <img src="https://blog.inerciadigital.com/wp-content/uploads/2016/11/qempo-peru-responsive.jpg" alt="Imagen de Controles y Componentes Responsivos">
+        <p>Aquí se encuentran los controles y componentes responsivos utilizados en esta página web:</p>
+        <blockquote>
+            <p><b>Menú de navegación:</b> Se ajusta automáticamente según el tamaño de la pantalla.</p>
+            <p><b>Botones:</b> Cambian de tamaño y diseño para adaptarse a diferentes dispositivos.</p>
+            <p><b>Imágenes:</b> Se redimensionan proporcionalmente para encajar en la pantalla sin perder calidad.</p>
+            <p><b>Textos:</b> Se adaptan al ancho de la pantalla para mejorar la legibilidad en dispositivos móviles.</p>
+            <p><b>Diseño de página:</b> Utiliza un diseño fluido que se ajusta dinámicamente al tamaño de la pantalla del dispositivo.</p>
+        </blockquote>
+    </div>
+  
+    <div id="contactoContenido" class="contenido" style="display:none;">
+        <h1 id="contacto">INFORMACIÓN DE CONTACTO</h1>
+        <img src="https://www.questionpro.com/userimages/site_media/mostrar-u-ocultar-preguntas.png" alt="Imagen de Contacto">
+        <p><b>CONTACTO PERSONAL</b></p>
+        <p><b>NOMBRE:</b> Jeannella Jamilee Jaramillo Villamar</p>
+        <p><b>GMAIL ESTUDIANTIL:</b> jjaramill28@utmachala.edu.ec</p>
+        <p><b>GMAIL PERSONAL:</b> jamilethjaramillo7@gmail.com</p>
+        <p><b>TELÉFONO:</b> 098 695 7577</p>
+        <p> .</p>
+        <p><b>REDES SOCIALES</b></p>
+        <p><b>FACEBOOK:</b> Jamilee Jaramillo</p>
+        <p><b>INSTAGRAM:</b> Jamilee Jaramillo</p>
+        <p><b>WHATSAPP:</b> Milee Jaramillo</p>
+        <p><b>TIKTOK:</b> @jamileejaramillo</p>
+        <p><b>DISCORD:</b> @Jjjv</p>
+        <p><b>GITHUB:</b> JamileeJaramillo</p>
+    </div>
+
+  
+    <script>
+        function mostrarContacto() {
+            document.getElementById("contactoContenido").style.display = "block";
+            document.getElementById("inicioContenido").style.display = "none"; 
+            document.getElementById("responsivoContenido").style.display = "none";
+            window.scrollTo(0, 0);
+        }
+  
+        function mostrarResponsivo() {
+            document.getElementById("inicioContenido").style.display = "none";
+            document.getElementById("responsivoContenido").style.display = "block";
+            document.getElementById("contactoContenido").style.display = "none";
+            window.scrollTo(0, 0);
+        }
+
+        function mostrarInicio() {
+            document.getElementById("responsivoContenido").style.display = "none";
+            document.getElementById("inicioContenido").style.display = "block";
+            document.getElementById("contactoContenido").style.display = "none";
+            window.scrollTo(0, 0);
+        }
+    </script>
+
+</body>
+</html>
